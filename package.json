@@ -1,0 +1,12 @@
+{
+  "name": "amp-sxg",
+  "version": "1.0.0",
+  "repository": "https://github.com/jeffjose/amp-sxg.git",
+  "author": "Jeffrey Jose <jeffjosejeff@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "pug src/*.pug --out public/",
+    "sxg": "./gen-signedexchange.sh 1.html"
+  }
+}
