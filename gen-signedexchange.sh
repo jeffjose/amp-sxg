@@ -5,4 +5,5 @@ gen-signedexchange \
   -privateKey keys/priv.key \
   -certUrl https://amp-sxg.firebaseapp.com/cert.cbor \
   -validityUrl https://amp-sxg.firebaseapp.com/resource.validity.msg \
+  -version 1b3 \
   -o public/${1}.sxg
