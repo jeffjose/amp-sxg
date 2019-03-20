@@ -1,6 +1,7 @@
 {
   "hosting": {
     "public": "public",
+    "trailingSlash": false,
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "headers": [
       {
@@ -20,12 +21,6 @@
             "value": "application/signed-exchange;v=b3"
           }
         ]
-      }
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
       }
     ]
   }
