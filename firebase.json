@@ -25,6 +25,19 @@
             "value": "nosniff"
           }
         ]
+      },
+      {
+        "source": "**/*.msg",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/cbor"
+          },
+          {
+            "key": "x-content-type-options",
+            "value": "nosniff"
+          }
+        ]
       }
     ]
   }
