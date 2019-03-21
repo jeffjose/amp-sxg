@@ -2,6 +2,7 @@ html(amp='')
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width,minimum-scale=1')
+    include styles.pug
     link(rel='canonical', href='index.html')
     link(rel='apple-touch-icon', sizes='180x180', href='favicon/apple-touch-icon.png')
     link(rel='icon', type='image/png', sizes='32x32', href='favicon/favicon-32x32.png')
@@ -9,7 +10,6 @@ html(amp='')
     link(rel='manifest', href='favicon/site.webmanifest')
     script(async='', src='https://cdn.ampproject.org/v0.js')
     script(async='', src='https://cdn.ampproject.org/v0/amp-analytics-0.1.js')
-    include styles.pug
     block styles
     title amp-sxg
   body
