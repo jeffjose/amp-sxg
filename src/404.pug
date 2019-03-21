@@ -2,9 +2,13 @@ extends includes/amp.pug
 
 block styles
   style(amp-custom='').
-    body {
+
+    .error {
+      background-color: #f94a7a;
+      color: white !important;
+      padding: 1rem;
     }
 
 block body
   div.wrapper
-    h1 404 :(
+    p.error 404 :(
