@@ -6,7 +6,13 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "pug src/*.pug --out public/",
-    "sxg": "./gen-signedexchange.sh 1.html"
+    "pug": "pug src/*.pug --out public/",
+    "sxg":
+      "run-for-every-file --src 'public/' --file '**/*.html' --run './gen-signedexchange.sh {{file-name-ext}}'",
+    "build": "yarn pug; yarn sxg",
+    "deploy": "yarn pug; yarn sxg; firebase deploy"
+  },
+  "dependencies": {
+    "run-for-every-file": "^1.1.0"
   }
 }
