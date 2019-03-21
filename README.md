@@ -1,5 +1,9 @@
 ### AMP Signed Exchanges
 
+*Setup gen-signedexchange*
+`go get -u github.com/WICG/webpackage/go/signedexchange/cmd/...`
+
+
 *Create a new signed exchange from HTML file*
  - Create a new pug file in `src/` based on an existing file (`index.pug` is a good start)
  - Run `yarn pug` to test it locally
