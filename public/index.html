@@ -1,15 +1,69 @@
-<html amp=""><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,minimum-scale=1"/><link rel="canonical" href="index.html"/><link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png"/><link rel="manifest" href="favicon/site.webmanifest"/><script async="" src="https://cdn.ampproject.org/v0.js"></script><style amp-custom="amp-custom">body {
+<html amp=""><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,minimum-scale=1"/><link rel="canonical" href="index.html"/><link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png"/><link rel="manifest" href="favicon/site.webmanifest"/><script async="" src="https://cdn.ampproject.org/v0.js"></script><script async="" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script><style amp-custom="amp-custom">body {
   color: #333;
   font-family: Verdana;
   border-top: 0.5rem solid #f94a7a;
 }
 
+a {
+  text-decoration: none;
+  color: #4a9ff9;
+  font-size: 0.9rem;
+}
+
 .wrapper {
   display: grid;
   place-items: center;
+  grid-template-columns: 1rem [main-start] 1fr [sxg-start] 1fr [main-end] 1rem;
+  grid-template-rows: repeat(15, 1fr);
+  grid-gap: 1rem;
+  height: 100vh;
 }
 
-.wrapper p {
+p.title {
   font-size: 2rem;
   color: #f94a7a;
-}</style><style amp-custom=""></style><title>amp-sxg</title></head><body><div class="wrapper"><p>Hello amp-sxg</p></div></body></html>
+  grid-column: main-start / main-end;
+}
+
+.regular {
+  grid-column-start: main-start;
+  color: #4a9ff9;
+}
+
+.sxg {
+  grid-column-start: sxg-start;
+  color: #2ac06d;
+}
+
+.top {
+  margin: 0px;
+  color: white;
+  padding: 0rem 1rem;
+  justify-self: stretch;
+  align-self: stretch;
+  display: grid;
+  place-items: center;
+  border-radius: 4px;
+  font-size: 1.2rem;
+}
+
+.top.sxg{
+  background-color: #2ac06d;
+}
+
+.top.regular {
+  background-color: #4a9ff9;
+}
+
+.active {
+  font-weight: bold;
+}</style><style amp-custom=""></style><title>amp-sxg</title></head><body><div class="wrapper"><p class="title">Hello AMP SxG!</p><p class="top regular"><span>Regular</span></p><p class="top sxg"><span>SxG</span></p><a class="regular" href="/index.html">index.html</a><a class="sxg" href="/index.html.sxg">index.html.sxg</a><a class="regular" href="/1.html">1.html</a><a class="sxg" href="/1.html.sxg">1.html.sxg</a><a class="regular" href="/2.html">2.html</a><a class="sxg" href="/2.html.sxg">2.html.sxg</a><a class="regular" href="/3.html">3.html</a><a class="sxg" href="/3.html.sxg">3.html.sxg</a></div><amp-analytics type="gtag"><script type="application/json" data-credentials="include">{
+  "vars": {
+    "gtag_id": "UA-91876100-2",
+    "config": {
+      "UA-91876100-2": {
+        "groups": "default"
+      }
+    }
+  }
+}</script></amp-analytics></body></html>

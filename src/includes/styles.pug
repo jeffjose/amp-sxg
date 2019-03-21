@@ -5,12 +5,57 @@ style(amp-custom).
     border-top: 0.5rem solid #f94a7a;
   }
 
+  a {
+    text-decoration: none;
+    color: #4a9ff9;
+    font-size: 0.9rem;
+  }
+
   .wrapper {
     display: grid;
     place-items: center;
+    grid-template-columns: 1rem [main-start] 1fr [sxg-start] 1fr [main-end] 1rem;
+    grid-template-rows: repeat(15, 1fr);
+    grid-gap: 1rem;
+    height: 100vh;
   }
 
-  .wrapper p {
+  p.title {
     font-size: 2rem;
     color: #f94a7a;
+    grid-column: main-start / main-end;
+  }
+
+  .regular {
+    grid-column-start: main-start;
+    color: #4a9ff9;
+  }
+
+  .sxg {
+    grid-column-start: sxg-start;
+    color: #2ac06d;
+  }
+
+  .top {
+    margin: 0px;
+    color: white;
+    padding: 0rem 1rem;
+    justify-self: stretch;
+    align-self: stretch;
+    display: grid;
+    place-items: center;
+    border-radius: 4px;
+    font-size: 1.2rem;
+  }
+
+  .top.sxg{
+    background-color: #2ac06d;
+  }
+
+  .top.regular {
+    background-color: #4a9ff9;
+  }
+
+  .active {
+    font-weight: bold;
   }

@@ -8,8 +8,10 @@ html(amp='')
     link(rel='icon', type='image/png', sizes='16x16', href='favicon/favicon-16x16.png')
     link(rel='manifest', href='favicon/site.webmanifest')
     script(async='', src='https://cdn.ampproject.org/v0.js')
+    script(async='', src='https://cdn.ampproject.org/v0/amp-analytics-0.1.js')
     include styles.pug
     block styles
     title amp-sxg
   body
     block body
+    block analytics

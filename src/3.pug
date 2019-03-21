@@ -1,5 +1,8 @@
 extends includes/amp.pug
 
+block analytics
+  include includes/analytics-gtag
+
 block styles
   style(amp-custom='').
     body {
@@ -7,4 +10,21 @@ block styles
 
 block body
   div.wrapper
-    p Page 3
+    p.title Page 3
+
+    p.top.regular
+      span Regular
+    p.top.sxg
+      span SxG
+
+    a.regular(href="/index.html") index.html
+    a.sxg(href="/index.html.sxg") index.html.sxg
+
+    a.regular(href="/1.html") 1.html
+    a.sxg(href="/1.html.sxg") 1.html.sxg
+
+    a.regular(href="/2.html") 2.html
+    a.sxg(href="/2.html.sxg") 2.html.sxg
+
+    a.active.regular(href="/3.html") 3.html
+    a.active.sxg(href="/3.html.sxg") 3.html.sxg
